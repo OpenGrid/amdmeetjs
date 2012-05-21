@@ -4,8 +4,8 @@
 </body>
 <script src="js/require.js" data-main="js/main"></script>
 <script>
-
-    var bootstrappedData = {
+define("bootdata", function(){
+    return {
         "data": [
             {
                 "name": "Facebook Platform",
@@ -137,5 +137,7 @@
             "next": "https://graph.facebook.com/search?q=platform&type=page&data&limit=25&offset=25&__after_id=249785141732686"
         }
     }
+});
+
 </script>
 </html>
