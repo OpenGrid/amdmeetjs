@@ -1,8 +1,13 @@
-define(["backbone"], function (Backbone) {
+define(["backbone", "bootdata"], function (Backbone, bootdata) {
     var Pages = Backbone.Collection.extend({
         initialize : function() {
-            this.url = "https://graph.facebook.com/search?q=platform&type=page";
-            this.fetch();
+            if(bootdata != null) {
+                this.reset(bootdata.data);
+                bootdata = null;
+            } else {
+                this.url = "https://graph.facebook.com/search?q=platform&type=page";
+                this.fetch();
+            }
         },
         parse : function(json) {
             return json.data;
