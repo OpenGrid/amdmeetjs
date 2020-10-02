@@ -4,7 +4,7 @@ JavaScript project. It also shows how to deal with data bootstrapping while usin
 How to build the project:
 node r.js -o app.build.js
 
-Links:
+Links: https://www.amd.com/en/technologies
 
 Require.js
 http://requirejs.org/
